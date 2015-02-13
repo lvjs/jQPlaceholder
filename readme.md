@@ -7,8 +7,7 @@ Polfill use span
 ---------------------------
 
 ###placeholder.js
-Download [placeholder.js](https://raw.github.com/lvjs/placeholder/master/src/placeholder.js)
-Download [html demo](https://raw.github.com/lvjs/placeholder/master/src/placeholder)
+Download [html demo](https://github.com//lvjs/jQPlaceholder/archive/master.zip)
 
 
 The `placeholder.js` polyfill works by insert a span which has same size with the input elem right after the input elem, and then use negative margin to position it right over the input elem. Here's how to use it:
@@ -53,8 +52,6 @@ Polfill use clone
 
 ###placeholder2.js
 
-Download [placeholder2.js](https://raw.github.com/lvjs/placeholder/master/src/placeholder.js)
-Download [html demo](https://raw.github.com/lvjs/placeholder/master/src/placeholder1)
 
 Placeholder2.js is a little diffrent with the fist one, it use the input's clone to cover over the input itself. And there may have a little problem when you have styles hook on name, because I set the clone obj's name to empty for it may causes mistakes. You can refer the demo to learn how to use.
 
