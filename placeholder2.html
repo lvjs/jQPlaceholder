@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Placeholder Demo2</title>
+<style>
+	html {
+		background: #fff;
+	}
+	.borderbox * {
+		box-sizing: border-box;
+	}
+	div, h1 {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	#search-box, #search-box-normal {
+		padding: 10px 10px 20px 26px;
+		height: 60px;
+		border: 1px solid #ccc;
+		border-bottom: 15px solid #bcd;
+	}
+	.container {
+		width: 80%;
+		min-width: 800px;
+		margin: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+		background: #fff;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Placehoder for Browser does not support2</h1>
+		<div class="borderbox">
+			<h2>This is border-box demo</h2>
+			<input class="input-xmedium search-box" type="text" id="search-box" />
+		</div>
+		<div>
+			<h2>This is content-box demo</h2>
+			<input class="input-xmedium search-box" type="text" id="search-box-normal" />
+		</div>
+	</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/placeholder2.js"></script>
+<script >
+	
+	//添加示例
+	$(function(){
+		$.addPlaceholder($('#search-box, #search-box-normal'), "placeholderText");
+	})
+</script>
+</body>
+</html>

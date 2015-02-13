@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Placeholder Demo</title>
+<style>
+	html {
+		background: #fff;
+	}
+	.borderbox * {
+		box-sizing: border-box;
+	}
+	div, h1 {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	#search-box, #search-box-normal {
+		padding: 10px 10px 10px 26px;
+		height: 60px;
+		border: 1px solid #ccc;
+		border-bottom: 15px solid #bcd;
+	}
+	.box {
+		width: 100px;
+		height: 50px;
+		border: 5px solid #cdb;
+		padding: 10px;
+		margin: 5px;
+	}
+	.box-content{
+		box-sizing: content-box;
+	}
+	.box-padding {
+		box-sizing: padding-box;
+	}
+	.box-border {
+		box-sizing: border-box;
+	}
+	.container {
+		width: 80%;
+		min-width: 800px;
+		margin: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+		background: #fff;
+	}
+	#togglePH{
+		text-decoration: underline;
+		color: blue;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Placehoder for Browser does not support</h1>
+		<div class="borderbox">
+			<h2>This is border-box demo</h2>
+			<input class="input-xmedium search-box" type="text" id="search-box" placeholder="i'm ok" />
+		</div>
+		<div>
+			<h2>This is content-box demo</h2>
+			<input class="input-xmedium search-box" type="text" id="search-box-normal" />
+		</div>
+		<a id="togglePH">add/remove placeholder</a>
+		<div class="box-content box">content box</div>
+		<div class="box-padding box">padding box(valid in firefox only)</div>
+		<div class="box-border box">border box</div>
+	</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/placeholder.js"></script>
+<script>
+	
+	//演示示例
+	$(function(){
+		$('#search-box, #search-box-normal').addPlaceholder("placeholderText");
+		var toggle = 1;
+		$('#togglePH').on('click', function(){
+			if(!toggle) {
+				$('#search-box, #search-box-normal').addPlaceholder("placeholderText");
+			} else {
+				$('#search-box, #search-box-normal').removePlaceholder();
+			}
+			toggle = !toggle;
+		});
+	});
+</script>
+</body>
+</html>
