@@ -15,7 +15,7 @@ The `placeholder.js` polyfill works by insert a span which has same size with th
 
 ```
 //import placeholder.js to your html like this:
-<script src="js/simple.js"></script>
+<script src="js/placeholder.js"></script>
 
 //add placeholder for input elems when domReady
 $('input').addPlaceholder("placeholderText");
@@ -39,7 +39,7 @@ The polyfill will disabled itself when the browser support placeholder.You can t
 ```
 //css
 .colorfulPlaceholder {
-    color: #abc;
+    color: #ed7020;
     font-family: helvetica;
 }
 
